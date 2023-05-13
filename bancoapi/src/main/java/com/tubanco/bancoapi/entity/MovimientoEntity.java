@@ -25,23 +25,22 @@ public class MovimientoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column (name = "fecha", nullable = false)
+    @Column(name = "fecha")
     private Date fecha;
 
-    @Column (name = "tipoMovimiento", nullable = false)
+    @Column(name = "tipoMovimiento")
     private String tipoMovimiento;
 
-    @Column (name = "valor", nullable = false)
+    @Column(name = "valor")
     private Double valor;
 
-    @Column (name = "saldo", nullable = false)
+    @Column(name = "saldo")
     private Double saldo;
 
     @ManyToOne
-    @JoinColumn(name = "numeroCuenta", nullable = false)
-    private CuentaEntity cuentaEntity;
+    @JoinColumn(name = "cuentaId")
+    private CuentaEntity cuenta;
 
 }

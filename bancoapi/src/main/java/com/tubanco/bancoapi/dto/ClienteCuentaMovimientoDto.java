@@ -9,13 +9,15 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CuentaDto {
+public class ClienteCuentaMovimientoDto {
 
-    private Long id;
-    private Long clienteId;
+    private String cliente;
+    private String fechaCliente;
     private String numeroCuenta;
-    private String tipoCuenta;
+    private String tipo;
     private Double saldoInicial;
-    private Boolean estado;
+    private Boolean estadoMovimiento;
+    private Double saldoDisponible;
+    private Double movimiento;
 
 }

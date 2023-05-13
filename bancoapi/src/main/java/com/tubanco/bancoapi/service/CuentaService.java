@@ -1,4 +1,9 @@
 package com.tubanco.bancoapi.service;
 
-public class CuentaService {
+import com.tubanco.bancoapi.dto.CuentaDto;
+
+public interface CuentaService {
+
+    CuentaDto saveCuenta(CuentaDto cuentaDto);
+
 }

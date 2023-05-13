@@ -20,5 +20,5 @@ public class ClienteDto {
     private String telefono;
     private Long clienteId;
     private String contrasena;
-    private Integer estado;
+    private Boolean estado;
 }
