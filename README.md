@@ -20,9 +20,10 @@ Este proyecto consiste en una API para un banco, desarrollada utilizando Spring 
 
 1. Clona este repositorio en tu máquina local.
 2. Navega hasta el directorio del proyecto en tu terminal.
-3. Ejecuta el comando `docker-compose build` para construir los contenedores de la aplicación y la base de datos.
-4. Ejecuta el comando `docker-compose up` para iniciar los contenedores.
-5. La aplicación estará disponible en `localhost:8080`.
+3. Ejecuta el comando `mvn clean package` para compilar y empaquetar el proyecto.
+4. Ejecuta el comando `docker-compose build` para construir los contenedores de la aplicación y la base de datos.
+5. Ejecuta el comando `docker-compose up` para iniciar los contenedores.
+6. La aplicación estará disponible en `localhost:8080`.
 
 ## Cómo detener el proyecto
 
