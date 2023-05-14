@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "29e8fede-862c-4525-a48e-81f5bed04d55",
+		"name": "Transacciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SearchAccounts",
+			"item": [
+				{
+					"name": "getAccountsByDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes/1/clientes?fechaInicio=23/01/2022&fechaFin=31/12/2024",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1",
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "23/01/2022"
+								},
+								{
+									"key": "fechaFin",
+									"value": "31/12/2024"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccountMovements",
+			"item": [
+				{
+					"name": "creditMovements",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/movimientos/1/20200/credito"
+					},
+					"response": []
+				},
+				{
+					"name": "debitMovements",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/movimientos/1/12000/debito"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreateUsers&Accounts",
+			"item": [
+				{
+					"name": "createCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Martha Cecilia\",\r\n    \"genero\": \"F\",\r\n    \"edad\": 55,\r\n    \"identificacion\": \"245322341\",\r\n    \"direccion\": \"calle 12345\",\r\n    \"telefono\": \"23453784\",\r\n    \"clienteId\": 8,\r\n    \"contrasena\": \"87jrkewhk92\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "createCuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"123456784422940\",\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"saldoInicial\": 1000.0,\r\n  \"estado\": true,\r\n  \"clienteId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/cuentas"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
